@@ -1,0 +1,9 @@
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\bin\Debug\netcoreapp3.1\Expenses.Model.deps.json
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\bin\Debug\netcoreapp3.1\Expenses.Model.dll
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\bin\Debug\netcoreapp3.1\Expenses.Model.pdb
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\obj\Debug\netcoreapp3.1\Expenses.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\obj\Debug\netcoreapp3.1\Expenses.Model.AssemblyInfoInputs.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\obj\Debug\netcoreapp3.1\Expenses.Model.AssemblyInfo.cs
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\obj\Debug\netcoreapp3.1\Expenses.Model.csproj.CoreCompileInputs.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\obj\Debug\netcoreapp3.1\Expenses.Model.dll
+D:\ZARCHI_WORKING\Expenses\Expenses.Model\obj\Debug\netcoreapp3.1\Expenses.Model.pdb

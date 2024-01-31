@@ -1,0 +1,8 @@
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.csproj.AssemblyReference.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.AssemblyInfoInputs.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.AssemblyInfo.cs
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.csproj.CoreCompileInputs.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.RazorAssemblyInfo.cache
+D:\ZARCHI_WORKING\Expenses\Expenses.Web\obj\Debug\netcoreapp3.1\Expenses.Web.RazorAssemblyInfo.cs
