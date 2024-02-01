@@ -29,7 +29,9 @@ namespace Expenses.DataLayer.Repository
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var item = _context.ExpenseModels.Find(id);
+            _context.Remove(item);
+            _context.SaveChanges();
         }
 
         public IEnumerable<ExpenseModel> GetAllExpenses()

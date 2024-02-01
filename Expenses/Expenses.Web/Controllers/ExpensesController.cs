@@ -1,6 +1,7 @@
 ﻿using Expenses.DataLayer.Repository;
 using Expenses.Model;
 using Microsoft.AspNetCore.Mvc;
+using PagedList.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,18 +17,25 @@ namespace Expenses.Web.Controllers
         {
             _expencesRepository = expencesRepository;
         }
-        public IActionResult Index(string searching)
+        public IActionResult Index(string searching,int? page)
         {
-            List<ExpenseModel> lists = new List<ExpenseModel>();
-            if(string.IsNullOrEmpty(searching))
+            var pageNum = page ?? 1;
+            var pageSize = 10;
+
+            IQueryable<ExpenseModel> query;
+
+            if (string.IsNullOrEmpty(searching))
             {
-                lists = _expencesRepository.GetAllExpenses().ToList();
+                query = _expencesRepository.GetAllExpenses().AsQueryable();
             }
             else
             {
-                lists = _expencesRepository.Search(searching).ToList();
+                query = _expencesRepository.Search(searching).AsQueryable();
             }
-            return View(lists);
+
+            var pagedList = query.ToPagedList(pageNum, pageSize);
+
+            return View(pagedList); 
         }
 
         [HttpGet]
@@ -107,6 +115,18 @@ namespace Expenses.Web.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             else
                 return View(item);
+        }
+        // POST: Expenses/Delete/1
+        [HttpPost,ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var selecteddata = _expencesRepository.GetExpenseByID(id);
+            if(selecteddata != null)
+            {
+                _expencesRepository.Delete(id);
+            }
+
+            return RedirectToAction("Index");
         }
     }
 
