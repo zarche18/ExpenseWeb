@@ -1,0 +1,24 @@
+﻿@model Expenses.Model.ExpenseModel;
+<h2>Details</h2> 
+<div>
+    <h4>Expense</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoneySpent)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit","Edit",new  { id= Model.ID })
+    @Html.ActionLink("Back To List","Index")
+</p>

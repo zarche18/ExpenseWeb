@@ -13,5 +13,15 @@ namespace Expenses.DataLayer
 
         }
         public DbSet<ExpenseModel> ExpenseModels { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ExpenseModel>()
+                .Property(e => e.MoneySpent)
+                .HasColumnType("decimal(18,2)"); // Adjust precision and scale accordingly
+
+            // Other configurations...
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

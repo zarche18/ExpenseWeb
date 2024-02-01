@@ -1,0 +1,41 @@
+﻿@model Expenses.Model.ExpenseModel
+<h2>
+    Edit
+</h2>
+
+@using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+<div>
+    <h4> Category</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ID)
+    <div>
+        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "" })
+        <div>
+            @Html.TextBoxFor(model => model.Title, new { htmlAttributes = new { @class = "" } })
+            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(model => model.MoneySpent, htmlAttributes: new { @class= ""})
+        <div>
+            @Html.TextBoxFor(model => model.MoneySpent, new {htmlAttributes = new { type="number", @class=""} })
+            @Html.ValidationMessageFor(model => model.MoneySpent,"", new { @class = "text-danger"})
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(model=> model.Category, htmlAttributes: new {@class ="" })
+        <div>
+            @Html.TextBoxFor(model => model.Category , new { htmlAttributes = new { @class="" } })
+            @Html.ValidationMessageFor( model => model.Category,"", new { @class ="text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+            }

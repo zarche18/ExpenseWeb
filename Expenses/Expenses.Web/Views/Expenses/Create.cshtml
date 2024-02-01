@@ -1,0 +1,35 @@
+﻿@model Expenses.Model.ExpenseModel;
+
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <h4> Expense </h4>
+        <hr />
+        @Html.ValidationSummary(true,"",new { @class = "text-danger" })
+        <div>
+            @Html.LabelFor(model => model.Title,htmlAttributes: new { @class =""})
+            <div>
+                @Html.TextBoxFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            @Html.LabelFor(model=> model.MoneySpent, htmlAttributes: new {@class="" })
+            <dvi>
+                @Html.TextBoxFor(model => model.MoneySpent, new { htmlAttributes = new { type = "number", @class = "" } })
+                @Html.ValidationMessageFor(model => model.MoneySpent,"", new {@class= "text-danger" })
+            </dvi>
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = ""})
+            <div>
+                @Html.TextBoxFor(model=> model.Category, new { htmlAttributes= new { @class = ""} })
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+}

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Expenses.DataLayer;
+using Expenses.DataLayer.Repository;
 
 namespace Expenses.Web
 {
@@ -30,7 +31,7 @@ namespace Expenses.Web
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             ;
-
+            services.AddScoped<IExpencesRepository, ExpencesRepository>();
             services.AddControllersWithViews();
 
         }
@@ -59,7 +60,7 @@ namespace Expenses.Web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Expenses}/{action=Index}/{id?}");
             });
         }
     }

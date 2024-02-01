@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Expenses.Model.ExpenseModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    @Html.ActionLink("Create", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Titel</th>
+        <th>Money Expense</th>
+        <th>Epense Day</th>
+        <th>Category</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@Html.DisplayFor(modelitem => item.ID)</td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MoneySpent)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ExpenseDay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Category)
+    </td>
+    <td>
+        @Html.ActionLink("Edit","Edit",new { id = item.ID })|
+        @Html.ActionLink("Details", "Details", new { id = item.ID}) 
+    </td>
+</tr>
+    }
+</table>
